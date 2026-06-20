@@ -40,7 +40,7 @@
         {
           "name": "prompt",
           "execute": [
-            "cat ${packageDir}/instructions/delegate.md"
+            "cat ${packageDir}/instructions/prompt.md"
           ],
           "help": {
             "text": "Print the delegation methodology (when to delegate, dispatch/monitor/react, self-delegation, parallel + multi-agent) the agent applies with its own aux4 jobs/cron/poll/queue"
