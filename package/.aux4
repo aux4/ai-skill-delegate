@@ -1,0 +1,53 @@
+{
+  "scope": "agent",
+  "name": "skill-delegate",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "Native agent skill: methodology for delegating work — run it in the background, in parallel, on a schedule, or hand it to another agent",
+  "tags": [
+    "ai",
+    "skill",
+    "ai-skill",
+    "delegate",
+    "agent",
+    "jobs",
+    "orchestration"
+  ],
+  "dependencies": [
+    "aux4/ai-skill",
+    "aux4/jobs",
+    "aux4/cron",
+    "aux4/poller",
+    "aux4/queue"
+  ],
+  "profiles": [
+    {
+      "name": "ai:skill",
+      "commands": [
+        {
+          "name": "delegate",
+          "execute": [
+            "profile:ai:skill:delegate"
+          ],
+          "help": {
+            "text": "Run work in the background, in parallel, on a schedule, or hand it to another agent — for tasks too big, slow, or parallel for one turn. Load before dispatching."
+          }
+        }
+      ]
+    },
+    {
+      "name": "ai:skill:delegate",
+      "commands": [
+        {
+          "name": "prompt",
+          "execute": [
+            "cat ${packageDir}/instructions/prompt.md"
+          ],
+          "help": {
+            "text": "Print the delegation methodology (when to delegate, dispatch/monitor/react, self-delegation, parallel + multi-agent) the agent applies with its own aux4 jobs/cron/poll/queue"
+          }
+        }
+      ]
+    }
+  ]
+}
