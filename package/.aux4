@@ -13,7 +13,11 @@
     "orchestration"
   ],
   "dependencies": [
-    "aux4/ai-skill"
+    "aux4/ai-skill",
+    "aux4/jobs",
+    "aux4/cron",
+    "aux4/poller",
+    "aux4/queue"
   ],
   "profiles": [
     {
